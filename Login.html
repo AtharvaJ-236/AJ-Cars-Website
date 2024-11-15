@@ -1,0 +1,162 @@
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url('IMG_2891.JPG');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+input[type=text], input[type=password], input[type=email] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: rgba(4, 170, 109, 0.9);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: rgba(244, 67, 54, 0.9);
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 39%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 5% auto 15% auto;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.animate {
+  animation: animatezoom 0.6s;
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+input:invalid {
+  border-color: red;
+}
+input:valid {
+  border-color: green;
+}
+
+h1 {
+  color: Maroon;
+  font-family: Math;
+  margin-left: 6px;
+}
+</style>
+</head>
+<body>
+
+<!-- Login Modal -->
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="Login.php" method="post">
+    <div class="imgcontainer">
+      <img src="wink-lightning-mcqueen.gif" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="username"><b>Username</b></label>
+      <input type="text" id="username" name="username" placeholder="Enter Username" pattern="[A-Za-z0-9_-]+" title="Username can only contain letters, numbers, underscores, and hyphens." required>
+
+      <label for="password"><b>Password</b></label>
+      <input type="password" id="password" name="password" placeholder="Enter Password" minlength="4" maxlength="8" title="Password must be between 4 and 8 characters." required>
+        
+      <button type="submit"><b>Login</b></button>
+      <label>
+        Forgot password? <a href="Reset_Password.html">Reset</a>
+      </label>
+    </div>
+
+    <div class="container" style="background-color:rgba(255, 255, 255, 0.9)">
+      <button type="button" onclick="redirectToRegistration()" class="cancelbtn">Cancel</button>
+    </div>
+  </form>
+</div>
+
+<script>
+var loginModal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == loginModal) {
+        loginModal.style.display = "none";
+    }
+}
+
+// Show the login modal when the page loads (optional)
+window.onload = function() {
+    loginModal.style.display = 'block'; // Uncomment if you want it to show automatically
+}
+
+function redirectToRegistration() {
+    window.location.href = "Registration Form.html"; 
+}
+</script>
+
+</body>
+</html>
