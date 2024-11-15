@@ -1,13 +1,11 @@
 **AJ Cars Web Application**
 
 **Overview:**
-AJ Cars is a PHP-based web application that allows admins to manage users and provides a car catalog where users can view details of different car models. Admins can add, edit, and delete user accounts, while the homepage displays images of cars that link to individual car detail pages.
+AJ Cars is web application that provides a car catalog where users can view details of different car models. 
 
 **Features:**
 
--User Management (Admin Only): Admins can manage users (add, edit, delete).
-
--Car Information Pages: Homepage displays car images, and clicking an image shows details of the selected car.
+-User Management: User can manage users .
 
 -Responsive Design: Optimized for desktop and mobile viewing.
 
